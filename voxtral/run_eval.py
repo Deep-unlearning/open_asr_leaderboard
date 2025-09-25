@@ -23,7 +23,7 @@ def main(args):
         minibatch_size = len(audios)
 
         inputs = processor.apply_transcription_request(
-            language="de",
+            language="en",
             model_id=args.model_id,
             audio=audios,
             format=['WAV' for _ in batch["audio"]],
