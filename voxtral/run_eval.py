@@ -22,8 +22,8 @@ def main(args):
         audios = [audio["array"] for audio in batch["audio"]]
         minibatch_size = len(audios)
 
-        inputs = processor.apply_transcrition_request(
-            language="en",
+        inputs = processor.apply_transcription_request(
+            language="de",
             model_id=args.model_id,
             audio=audios,
             format=['WAV' for _ in batch["audio"]],
